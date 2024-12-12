@@ -1,12 +1,12 @@
 body {
-    font-family: 'SF Pro Text', sans-serif; /* Same font as in main site */
+    font-family: 'SF Pro Text', sans-serif;
     margin: 0;
     padding: 0;
     background-color: #f5f5f5; /* Light grey background */
-    color: #333; /* Dark text color */
+    color: #333;
     display: flex;
     flex-direction: column;
-    min-height: 100vh; /* Full height */
+    min-height: 100vh;
 }
 
 header {
@@ -21,18 +21,17 @@ h5 {
     font-weight: 400;
     margin-top: 5px;
     margin-bottom: 10px;
-    font-family: 'SF Pro Text', sans-serif; /* Same font as body */
 }
 
 nav {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 10px 0; /* Space above and below the nav */
+    margin: 10px 0;
 }
 
 nav > a {
-    margin: 0 15px; /* Space between links */
+    margin: 0 15px;
 }
 
 nav a {
@@ -44,18 +43,18 @@ nav a {
 }
 
 nav a:hover {
-    color: #007bff; /* Change color on hover */
+    color: #007bff;
 }
 
 /* Style for the About Me title */
 .about-title {
-    font-size: 24px; /* Adjust title size if needed */
-    text-align: center; /* Center the title */
+    font-size: 24px;
+    text-align: center;
     font-weight: 600;
     margin-bottom: 30px;
 }
 
-/* Style for the profile image */
+/* Profile image */
 .profile-image {
     max-width: 100%;
     height: auto;
@@ -63,59 +62,74 @@ nav a:hover {
     margin-bottom: 20px;
 }
 
-/* Style for the company names */
+/* Company links */
 .company-link {
-    font-weight: bold; /* Make company names bold */
-    text-decoration: none; /* Remove underline */
-    color: inherit; /* Inherit text color */
+    font-weight: bold;
+    text-decoration: none;
+    color: inherit;
 }
 
 .company-link:hover {
-    color: blue; /* Change color to blue on hover */
+    color: blue;
 }
 
-/* General styles for the About section paragraphs */
+/* General styles for paragraphs */
 .about-description,
 .about-vision,
-.about-interests {
-    margin: 10px 0; /* Add margin between paragraphs */
+.about-interests,
+.about-values,
+.about-projects,
+.about-skills {
+    margin: 10px 0;
 }
 
-/* Add styling for the separate sections */
-.about-bio,
-.about-vision,
-.about-interests {
-    background-color: #ffffff; /* White background for each section */
+/* Each section styled as a white box */
+#bio-section,
+#vision-section,
+#values-section,
+#interests-section,
+#projects-section,
+#skills-section {
+    background-color: #ffffff;
     padding: 20px;
-    margin: 20px 0; /* Add space between sections */
-    border-radius: 8px; /* Rounded corners for sections */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
+    margin: 20px 0;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Add hover effect for sections */
-.about-bio:hover,
-.about-vision:hover,
-.about-interests:hover {
-    transform: translateY(-5px); /* Lift section on hover */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Stronger shadow */
+/* Hover effect for sections */
+#bio-section:hover,
+#vision-section:hover,
+#values-section:hover,
+#interests-section:hover,
+#projects-section:hover,
+#skills-section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-/* Style for the section headings */
-.about-bio h3,
-.about-vision h3,
-.about-interests h3 {
-    font-size: 20px; /* Larger size for section headings */
+/* Section headings */
+#bio-section h3,
+#vision-section h3,
+#values-section h3,
+#interests-section h3,
+#projects-section h3,
+#skills-section h3 {
+    font-size: 20px;
     font-weight: 600;
     margin-bottom: 10px;
     transition: color 0.3s ease;
 }
 
 /* Hover effect for section headings */
-.about-bio h3:hover,
-.about-vision h3:hover,
-.about-interests h3:hover {
-    color: #007bff; /* Change color to blue on hover */
+#bio-section h3:hover,
+#vision-section h3:hover,
+#values-section h3:hover,
+#interests-section h3:hover,
+#projects-section h3:hover,
+#skills-section h3:hover {
+    color: #007bff;
 }
 
 /* Responsive design for smaller screens */
@@ -124,62 +138,86 @@ nav a:hover {
         padding: 15px;
     }
 
-    .about-bio,
-    .about-vision,
-    .about-interests {
+    #bio-section,
+    #vision-section,
+    #values-section,
+    #interests-section,
+    #projects-section,
+    #skills-section {
         padding: 15px;
     }
 
     .about-title {
-        font-size: 20px; /* Adjust title size for smaller screens */
+        font-size: 20px;
     }
 
-    .about-bio h3,
-    .about-vision h3,
-    .about-interests h3 {
-        font-size: 18px; /* Smaller section heading for smaller screens */
+    #bio-section h3,
+    #vision-section h3,
+    #values-section h3,
+    #interests-section h3,
+    #projects-section h3,
+    #skills-section h3 {
+        font-size: 18px;
     }
 }
 
 main {
     display: flex;
     flex-direction: column;
-    align-items: center; /* Center align content */
+    align-items: center;
     padding: 20px;
-    flex: 1; /* Take up remaining space */
+    flex: 1;
 }
 
 .content-wrapper {
-    max-width: 800px; /* Maximum width for readability */
-    width: 100%; /* Full width */
+    max-width: 800px;
+    width: 100%;
     padding: 20px;
-    background: white; /* White background for content area */
-    border-radius: 8px; /* Slightly rounded corners */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 h2 {
-    font-size: 28px; /* Size for h2 */
-    font-weight: 600; /* Bold weight for h2 */
-    margin: 20px 0; /* Margin for h2 */
-    text-align: center; /* Center align heading */
+    font-size: 28px;
+    font-weight: 600;
+    margin: 20px 0;
+    text-align: center;
 }
 
 img {
-    width: 150px; /* Set desired width */
-    height: 150px; /* Set desired height */
-    border-radius: 50%; /* Circular image */
-    display: block; /* Ensures the image is a block element */
-    margin: 0 auto; /* Center the image */
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto;
 }
 
+/* Contact Me Section Styling */
+#skills-section .contact-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#skills-section .contact-list p {
+    margin: 0;
+    padding: 0;
+}
+
+#skills-section .contact-list a {
+    color: inherit;
+    text-decoration: none;
+}
+
+
 .article-content {
-    text-align: left; /* Left align text */
+    text-align: left;
 }
 
 p {
-    margin: 10px 0; /* Top and bottom margin for paragraphs */
-    line-height: 1.6; /* Improved readability */
+    margin: 10px 0;
+    line-height: 1.6;
 }
 
 footer p {
@@ -189,13 +227,8 @@ footer p {
 footer {
     text-align: center;
     padding: 10px 0;
-    background-color: #fff; /* White footer */
+    background-color: #fff;
     width: 100%;
-    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-    margin-top: auto; /* Keeps footer at the bottom */
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+    margin-top: auto;
 }
-
-
-
-
-

@@ -23,84 +23,20 @@
         <div class="content-wrapper">
             <article class="blog-post">
                 <h2>Categories</h2>
-                <p>Use the categories below to find content that matches your interests.</p>
-                <ul>
-                    <li>
-                        <a href="/categories/category1.html">Architecture</a>
-                        <ul>
-                            <li><a href="/categories/category1/subcategory1.html">Computer Architecture</a></li>
-                            <li><a href="/categories/category1/subcategory2.html">Network Architecture</a></li>
-                            <li><a href="/categories/category1/subcategory3.html">Cloud Architecture</a></li>
-                            <li><a href="/categories/category1/subcategory3.html">Software Architecture</a></li>
-                            <li><a href="/categories/category1/subcategory3.html">Data Architecture</a></li>
-                            <li><a href="/categories/category1/subcategory3.html">System Architecture</a></li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="/categories/category2.html">Engineering</a>
-                        <ul>
-                            <li><a href="/categories/category2/subcategory1.html">Software Engineering</a></li>
-                            <li><a href="/categories/category2/subcategory2.html">Systems Engineering</a></li>
-                            <li><a href="/categories/category2/subcategory2.html">Network Engineering</a></li>
-                            <li><a href="/categories/category2/subcategory2.html">Electrical Engineering</a></li>
-                            <li><a href="/categories/category2/subcategory2.html">Mechanical Engineering</a></li>
-                            <li><a href="/categories/category2/subcategory2.html">DevOps</a></li>
-                            <li><a href="/categories/category2/subcategory2.html">Data Engineering</a></li>
-                            <li><a href="/categories/category2/subcategory2.html">Robotics Engineering</a></li>
-                            <li><a href="/categories/category2/subcategory2.html">Embedded Systems Engineering</a></li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="/categories/category3.html">Hardware</a>
-                        <ul>
-                            <li><a href="/categories/category2/subcategory1.html">Computer Hardware</a></li>
-                            <li><a href="/categories/category2/subcategory2.html">Networking Hardware</a></li>
-                            <li><a href="/categories/category2/subcategory2.html">Embedded Systems</a></li>
-                            <li><a href="/categories/category2/subcategory2.html">Peripheral Devices</a></li>
-                            <li><a href="/categories/category2/subcategory2.html">Storage Solutions</a></li>
-                            <li><a href="/categories/category2/subcategory2.html">Mobile Devices</a></li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="/categories/category4.html">Programming</a>
-                        <ul>
-                            <li><a href="/categories/category4/subcategory1.html">C</a></li>
-                            <li><a href="/categories/category4/subcategory1.html">C++</a></li>
-                            <li><a href="/categories/category4/subcategory1.html">Java</a></li>
-                            <li><a href="/categories/category4/subcategory1.html">JavaScript</a></li>
-                            <li><a href="/categories/category4/subcategory1.html">Python</a></li>
-                            <li><a href="/categories/category4/subcategory1.html">PHP</a></li>
-                            <li><a href="/categories/category4/subcategory1.html">TypeScript</a></li>
-                            <li><a href="/categories/category4/subcategory1.html">Scala</a></li>
-                            <li><a href="/categories/category4/subcategory1.html">Rust</a></li>
-                            <li><a href="/categories/category4/subcategory1.html">Go</a></li>
-                            <li><a href="/categories/category4/subcategory1.html">Bash</a></li>
-                            <li><a href="/categories/category4/subcategory1.html">Haskell</a></li>
-                            <li><a href="/categories/category4/subcategory1.html">Julia</a></li>
-                            <li><a href="/categories/category4/subcategory1.html">J</a></li>
-                            <li><a href="/categories/category4/subcategory1.html">x86-64</a></li>
-                            <li><a href="/categories/category4/subcategory1.html">R</a></li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="/categories/category4.html">Typing</a>
-                        <ul>
-                            <li><a href="/categories/category4/subcategory1.html">Layouts</a></li>
-                            <li><a href="/categories/category4/subcategory1.html">Speed Development</a></li>
-                            <li><a href="/categories/category4/subcategory1.html">Websites</a></li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="/categories/category4.html">Competitive Programming</a>
-                        <ul>
-                            <li><a href="/categories/category4/subcategory1.html">Resources</a></li>
-                            <li><a href="/categories/category4/subcategory1.html">Problem Solving Techniques</a></li>
-                            <li><a href="/categories/category4/subcategory1.html">Data Strcutures</a></li>
-                            <li><a href="/categories/category4/subcategory1.html">Algorithmic concepts</a></li>
-                        </ul>
-                    </li>
-                </ul>
-                <p>Feel free to click on any category or subcategory to dive deeper into the topics that interest you!</p>
+                
+                <!-- Table to display categories and articles -->
+                <table id="categories-table" style="width: 100%; border-collapse: collapse;">
+                    <thead>
+                        <tr>
+                            <th>Category</th>
+                            <th>Articles</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Rows will be populated dynamically here -->
+                    </tbody>
+                </table>
+
             </article>
         </div>
     </main>
@@ -108,6 +44,8 @@
     <footer>
         <p>&copy; Crafted with ❤️ by Kris Yotam</p>
     </footer>
+
+    <!-- Linking the external script file -->
+    <script src="/categories.js"></script>
 </body>
 </html>
-

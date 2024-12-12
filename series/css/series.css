@@ -1,3 +1,4 @@
+/* Base styles */
 body {
     font-family: 'SF Pro Text', sans-serif;
     margin: 0;
@@ -10,6 +11,7 @@ body {
     text-align: center;
 }
 
+/* Header styling */
 header {
     background-color: #fff;
     padding: 10px;
@@ -25,6 +27,7 @@ h5 {
     font-family: 'SF Pro Text', sans-serif;
 }
 
+/* Navigation bar styling */
 nav {
     display: flex;
     justify-content: center;
@@ -48,6 +51,7 @@ nav a:hover {
     color: #007bff;
 }
 
+/* Main content area */
 main {
     display: flex;
     flex-direction: column;
@@ -57,7 +61,7 @@ main {
 }
 
 .content-wrapper {
-    max-width: 800px;
+    max-width: 1000px;
     width: 100%;
     padding: 20px;
     background: white;
@@ -78,38 +82,47 @@ p {
     text-align: center;
 }
 
-/* Styles for the table */
-table {
+/* Styling for the posts table */
+#posts-list table {
     width: 100%;
+    border-collapse: collapse;  /* Collapse borders between table cells */
     margin-top: 20px;
-    border-collapse: collapse;
     background-color: #fff;
-    border-radius: 8px; /* Rounded corners for the table */
+    border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-th, td {
-    padding: 12px;
-    text-align: left;
-    border: none; /* Remove bottom border to avoid gaps */
+table thead {
+    background-color: #f1f1f1;
 }
 
-th {
-    background-color: #f2f2f2;
+table th,
+table td {
+    padding: 15px;
+    text-align: left;
+    border: 1px solid #ddd;
+    margin: 0;  /* No space between cells */
+}
+
+table th {
     font-weight: 600;
+    font-size: 16px;
     color: #333;
 }
 
-td {
-    font-size: 16px;
-    color: #666;
+table td {
+    font-size: 14px;
+    color: #555;
 }
 
-tr:hover {
-    background-color: #f9f9f9; /* Highlight row on hover */
+table tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
 }
 
-/* Styles for links in the table */
+table tbody tr:hover {
+    background-color: #f1f1f1;
+}
+
 table a {
     text-decoration: none;
     color: #007bff;
@@ -117,9 +130,10 @@ table a {
 }
 
 table a:hover {
-    color: #0056b3; /* Darker blue for hover */
+    color: #0056b3;
 }
 
+/* Footer styling */
 footer {
     text-align: center;
     padding: 10px 0;
