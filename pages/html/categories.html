@@ -4,48 +4,54 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Categories</title>
-    <link rel="stylesheet" href="/blogpost/css/blogpost.css">
-    <link rel="stylesheet" href="/pages/css/categories.css">
+    <link rel="stylesheet" href="/pages/css/styles.css"> <!-- Link to main styles -->
+    <link rel="stylesheet" href="/pages/css/about.css"> <!-- Link to about styles -->
 </head>
 <body>
-    <header>
-        <h5>Kris Yotam</h5>
-        <nav>
-            <a href="/index.html">Home</a>
-            <a href="/pages/html/about.html">About</a>
-            <a href="/pages/html/archive.html">Archive</a>
-            <a href="/pages/html/categories.html">Categories</a>
-            <a href="https://gitserver.vercel.app/">Git</a>
-        </nav>
-    </header>
+    <div class="container">
+        <header>
+            <nav>
+                <div class="logo">
+                    <h1><a href="/index.html">Kris Yotam</a></h1>
+                </div>
+                <div class="nav-links">
+                    <ul>
+                        <li><a href="/pages/html/about.html">About</a></li>
+                        <li><a href="https://www.goodreads.com/review/list/163025645-kris-yotam?shelf=mathematics">Shelves</a></li>
+                        <li>
+                            <label class="switch">
+                                <input type="checkbox" id="darkModeToggle">
+                                <span class="slider"></span>
+                            </label>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
 
-    <main>
-        <div class="content-wrapper">
-            <article class="blog-post">
-                <h2>Categories</h2>
-                
-                <!-- Table to display categories and articles -->
-                <table id="categories-table" style="width: 100%; border-collapse: collapse;">
-                    <thead>
-                        <tr>
-                            <th>Category</th>
-                            <th>Articles</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <!-- Rows will be populated dynamically here -->
-                    </tbody>
-                </table>
+        <h2>Categories</h2>
+        
+        <table id="categoriesTable">
+            <thead>
+                <tr>
+                    <th>Category</th>
+                    <th>Articles</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Dynamically filled rows will go here -->
+            </tbody>
+        </table>
+    </div>
 
-            </article>
-        </div>
-    </main>
+    <div class="footer-grounding">
+        <footer class="footer">
+            <a href="https://github.com/krisyotam" class="source-link">Kris Yotam (@krisyotam)</a>
+            <a href="https://gitserver.vercel.app/" class="source-link">Source</a>
+        </footer>
+    </div>
 
-    <footer>
-        <p>&copy; Crafted with ❤️ by Kris Yotam</p>
-    </footer>
-
-    <!-- Linking the external script file -->
-    <script src="/categories.js"></script>
+    <script src="/pages/js/dark-mode.js"></script> <!-- Ensure dark mode script is included -->
+    <script src="/pages/js/categories.js"></script> <!-- External JavaScript file to load the categories -->
 </body>
 </html>

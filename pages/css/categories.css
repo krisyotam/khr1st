@@ -1,130 +1,19 @@
-body {
-    font-family: 'SF Pro Text', sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f5f5f5;
-    color: #333;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    text-align: center;
-}
-
-header {
-    background-color: #fff;
-    padding: 10px;
-    text-align: center;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-h5 {
-    font-size: 16px;
-    font-weight: 400;
-    margin-top: 5px;
-    margin-bottom: 10px;
-    font-family: 'SF Pro Text', sans-serif;
-}
-
-nav {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 10px 0;
-}
-
-nav > a {
-    margin: 0 15px;
-}
-
-nav a {
-    text-decoration: none;
-    color: #000;
-    font-weight: 400;
-    font-size: 12px;
-    transition: color 0.3s ease;
-}
-
-nav a:hover {
-    color: #007bff;
-}
-
-main {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
-    flex: 1;
-}
-
-.content-wrapper {
-    max-width: 800px;
+#categoriesTable {
     width: 100%;
-    padding: 20px;
-    background: white;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-h2 {
-    font-size: 28px;
-    font-weight: 600;
-    margin: 20px 0;
-    text-align: center;
-}
-
-p {
-    margin: 10px 0;
-    line-height: 1.6;
-    text-align: center;
-}
-
-/* Styles for the table */
-table {
-    width: 100%;
-    margin-top: 20px;
     border-collapse: collapse;
-    background-color: #fff;
-    border-radius: 8px; /* Rounded corners for the table */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
 }
 
-th, td {
-    padding: 12px;
+#categoriesTable th, #categoriesTable td {
+    padding: 10px;
     text-align: left;
-    border: none; /* Remove bottom border to avoid gaps */
+    border: 1px solid #ddd;
 }
 
-th {
+#categoriesTable th {
     background-color: #f2f2f2;
-    font-weight: 600;
-    color: #333;
 }
 
-td {
-    font-size: 16px;
-    color: #666;
-}
-
-tr:hover {
-    background-color: #f9f9f9; /* Highlight row on hover */
-}
-
-/* Styles for links in the table */
-table a {
-    text-decoration: none;
-    color: #007bff;
-    font-weight: 500;
-}
-
-table a:hover {
-    color: #0056b3; /* Darker blue for hover */
-}
-
-footer {
-    text-align: center;
-    padding: 10px 0;
-    background-color: #fff;
-    width: 100%;
-    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
-    margin-top: auto;
+#categoriesTable tbody tr:hover {
+    background-color: #f9f9f9;
 }

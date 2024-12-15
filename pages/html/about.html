@@ -3,128 +3,61 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Me</title>
-    <link rel="stylesheet" href="/pages/css/about.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/2.1.3/marked.min.js"></script>
-    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-AMS_HTML"></script>
-    <script>
-        MathJax.Hub.Config({
-            tex2jax: {
-                inlineMath: [['$', '$'], ['\\(', '\\)']],
-                displayMath: [['$$', '$$'], ['\\[', '\\]']],
-                processEscapes: true
-            }
-        });
-    </script>
+    <title>About Kris Yotam</title>
+    <link rel="stylesheet" href="/pages/css/styles.css"> <!-- Link to main styles -->
+    <link rel="stylesheet" href="/pages/css/about.css"> <!-- Link to about styles -->
 </head>
 <body>
-    <header>
-        <h5>Kris Yotam</h5>
-        <nav>
-            <a href="/index.html">Home</a>
-            <a href="/pages/html/about.html">About</a>
-            <a href="/pages/html/archive.html">Archive</a>
-            <a href="/pages/html/categories.html">Categories</a>
-            <a href="https://gitserver.vercel.app/">Git</a>
-        </nav>
-    </header>
-
-    <main>
-        <div class="content-wrapper">
-            <article class="blog-post">
-                <h2 class="about-title">About Me</h2>
-
-                <!-- Biography Section -->
-                <div id="bio-section" class="about-section">
-                    <h3>Biography</h3>
-                    <img class="profile-image" src="/blogpost/content/imgs/krisyotam.jpg" alt="Kris Yotam" style="max-width: 100%; height: auto; border-radius: 8px; margin-bottom: 20px;">
-                    <p class="about-description">
-                        I head several projects aimed at freeing individuals from the modern constraints of surveillance, control, and overreach. These include <a class="company-link" href="https://github.com/FreePeople">Free People</a> and <a class="company-link" href="https://github.com/Offline">Offline</a>, which focus on promoting autonomy, privacy, and self-sovereignty. Additionally, I work on various open-source initiatives with a goal of enabling others to reclaim control over their lives and digital presence.
-                    </p>
+    <div class="container">
+        <header>
+            <nav>
+                <div class="logo">
+                    <h1><a href="/index.html">Kris Yotam</a></h1>
                 </div>
-
-                <!-- Vision Section -->
-                <div id="vision-section" class="about-section">
-                    <h3>Vision</h3>
-                    <p>
-                        My mission is to help liberate individuals from the modern systems that infringe upon their freedom, whether through surveillance, excessive data collection, or other forms of control. Everything I do revolves around this core vision: to empower others through open-source projects and provide resources that enable true autonomy. My work aligns with a commitment to decentralization, privacy, and creating sustainable ways to preserve and enhance human freedom in the digital age.
-                    </p>
+                <div class="nav-links">
+                    <ul>
+                        <li><a href="/pages/html/about.html">About</a></li>
+                        <li><a href="/pages/html/categories.html">Shelves</a></li>
+                        <li>
+                            <label class="switch">
+                                <input type="checkbox" id="darkModeToggle">
+                                <span class="slider"></span>
+                            </label>
+                        </li>
+                    </ul>
                 </div>
+            </nav>
+        </header>
 
-                <!-- Values Section -->
-                <div id="values-section" class="about-section">
-                    <h3>Values</h3>
-                    <p>
-                        The values I live by are rooted in naturalness, economy, decentralization, minimalism, purity, asceticism, and peace. I believe in the seamless integration of technology with life, where systems are simple, intuitive, and deeply customizable. My focus is on creating and supporting programs that are lightweight, extensible, and decentralized, giving individuals greater control and freedom over their personal and digital environments.
-                    </p>
-                </div>
+        <h2>About</h2>
+        <img src="/assets/krisyotam.jpg" alt="Kris Yotam" class="about-img">
+        <p>
+            I’m a software engineer and the creator of many open-source projects. My journey in tech started when I was young, advocating for Linux and later becoming passionate about JavaScript and web development.
+        </p>
+        <p>
+            In my career, I’ve contributed to several influential projects, including Socket.IO and Mongoose. I co-authored Next.js, a popular React framework, and I’ve had the privilege of building tools like Hyper and Cloudup.
+        </p>
+        <p>
+            My focus is on developer experience, and I'm dedicated to creating tools and platforms that make the web faster and more accessible.
+        </p>
+        
+        <h3>Technical Contributions</h3>
+        <ul class="technical-contributions">
+            <li>Contributed to MooTools as part of their core team and led the MooTools Forge package repository.</li>
+            <li>Authored "Smashing Node.js: JavaScript Everywhere."</li>
+            <li>Helped develop several critical projects in the Node.js ecosystem, including Express.js, Connect, and Mongoose.</li>
+            <li>Authored Socket.IO, powering real-time communication for major apps like Notion and Coinbase.</li>
+            <li>Built Hyper, a cross-platform terminal emulator.</li>
+            <li>Designed and co-authored Next.js, a leading React framework.</li>
+        </ul>
+    </div>
+    <div class="footer-grounding">
+        <footer class="footer">
+            <a href="https://github.com/krisyotam" class="source-link">Kris Yotam (@krisyotam)</a>
+            <a href="https://gitserver.vercel.app/" class="source-link">Source</a>
+        </footer>
+    </div>
 
-                <!-- Interests Section -->
-                <div id="interests-section" class="about-section">
-                    <h3>Interests</h3>
-                    <p>
-                        I have a deep interest in technology, spanning from old to modern hardware, including a fascination with keyboards, programming languages, competitive coding, and Capture The Flag (CTF) challenges. My exploration also includes open-source software, system architecture, and everything related to decentralization and autonomy.
-                    </p>
-                </div>
-
-                <!-- Projects Section -->
-                <div id="projects-section" class="about-section">
-                    <h3>Projects</h3>
-                    <p>
-                        I lead a variety of projects, some of which are listed below:
-                        <ul>
-                            <li><a href="https://github.com/FreePeople">Free People</a> - Focusing on freedom and privacy.</li>
-                            <li><a href="https://github.com/Offline">Offline</a> - A project to reduce digital dependency.</li>
-                            <li><a href="https://github.com/C1YPHER">C1YPHER</a> - A project centered around cryptography and security.</li>
-                            <li><a href="https://github.com/LaelLabs">Lael Labs</a> - A collaborative space for innovation in tech and society.</li>
-                        </ul>
-                    </p>
-                </div>
-
-                <!-- Skills Section -->
-                <div id="skills-section" class="about-section">
-                    <h3>Skills</h3>
-                    <p>
-                        I have experience in various fields, including:
-                        <ul>
-                            <li>Systems Engineering</li>
-                            <li>Programming Languages: Python, C, Rust, JavaScript</li>
-                            <li>Networking and Security</li>
-                            <li>Competitive Coding</li>
-                            <li>Open-Source Development</li>
-                        </ul>
-                    </p>
-                </div>
-
-
-<!-- Contact Me Section -->
-<div id="skills-section" class="about-section">
-    <h3>Contact Me</h3>
-    <p>
-        Feel free to contact me by any of the following means:
-    </p>
-    <ul>
-        <li>Email: <a href="mailto:me@ch1p.io">krisyotam@protonmail.com</a> (Please use PGP)</li>
-        <li>Tox ID: 4F6E82D285B342CAE83687FA63F1B083A9FD053C8BE08C709E25491C74E6016CB52C987692C3</li>
-        <li>Libera.Chat: <a href="irc://irc.libera.chat/khr1st">khr1st</a></li>
-    </ul>
-</div>
-
-
-
-            </article>
-        </div>
-    </main>
-
-    <footer>
-        <p>&copy; Crafted with ❤️ by Kris Yotam</p>
-    </footer>
-
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            MathJax.Hub.Queue(["Typeset", MathJax.Hub]);
-        });
-    </script>
+    <script src="/pages/js/dark-mode.js"></script> <!-- Ensure script is included -->
 </body>
 </html>

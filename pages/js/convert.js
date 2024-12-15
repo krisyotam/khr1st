@@ -11,7 +11,7 @@ marked.setOptions({
 // Directory paths
 const postsDirectory = path.join(__dirname, 'posts');
 const publicDirectory = path.join(postsDirectory, 'public');
-const templatePath = path.join(__dirname, 'blogpost', 'content', 'post-template.html');
+const templatePath = path.join(__dirname, 'post-template.html');  // Hardcoded path to the template in the root directory
 
 // Ensure the public directory exists
 if (!fs.existsSync(publicDirectory)) {
@@ -85,10 +85,6 @@ fs.watch(postsDirectory, (eventType, filename) => {
         convertMarkdownToHTML();
     }
 });
-
-
-
-
 
 
 
