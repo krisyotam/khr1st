@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Making the Web. Faster.</title>
+    <link rel="stylesheet" href="/pages/css/styles.css">
+    <link rel="stylesheet" href="/pages/css/blogpost.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header (from index.html) -->
+        <header>
+            <nav>
+                <div class="logo">
+                    <h1><a href="/index.html">Kris Yotam</a></h1>
+                </div>
+                <div class="nav-links">
+                    <ul>
+                        <li><a href="/pages/html/about.html">About</a></li>
+                        <li><a href="/pages/html/categories.html">Shelves</a></li>
+                        <li>
+                            <label class="switch">
+                                <input type="checkbox" id="darkModeToggle">
+                                <span class="slider"></span>
+                            </label>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+
+        <!-- Main Content (Post Page) -->
+        <main>
+            <article class="post">
+                <!-- Post Title -->
+                <h1>Making the Web. Faster.</h1>
+
+                <!-- Meta Information -->
+                <p class="meta">
+                    <a href="https://x.com/krisyotam" target="_blank">@krisyotam</a> | 
+                    June 23, 2021 
+                    <span>(3y ago)</span> 
+                    <span class="views">751 views</span>
+                </p>
+
+                <!-- Tags List -->
+                <ul class="tags">
+                    <li><a href="/pages/html/tags/optimization.html">Optimization</a></li>
+                    <li><a href="/pages/html/tags/performance.html">Performance</a></li>
+                    <li><a href="/pages/html/tags/webdev.html">Web Development</a></li>
+                    <li><a href="/pages/html/tags/caching.html">Caching</a></li>
+                </ul>
+
+                <!-- Post Content -->
+                <section class="content">
+                    <p>In this post, we explore how to improve website performance by focusing on various optimization techniques. We discuss strategies like compressing images, reducing JavaScript payloads, and leveraging caching to ensure a faster user experience.</p>
+                    <p>By understanding these techniques, you can build websites that load quickly, improve user engagement, and rank better in search engines.</p>
+                    <h2>Image Optimization</h2>
+                    <p>Images are often the largest assets on a website. By optimizing images, you can reduce load times significantly. Use tools like ImageOptim or TinyPNG to compress images without sacrificing quality.</p>
+                    <h2>JavaScript Performance</h2>
+                    <p>Minify and bundle your JavaScript files to reduce the number of requests and the size of each file. Tools like Webpack or Rollup can help automate this process.</p>
+                    <h2>Caching</h2>
+                    <p>Leverage browser caching to store static assets like CSS, JavaScript, and images locally on the user's device. This minimizes repeat requests and reduces load times for returning visitors.</p>
+                </section>
+                
+                <!-- Utterances Comments Section -->
+                <section id="comments">
+                    <script src="https://utteranc.es/client.js"
+                            repo="krisyotam/khr1st"
+                            issue-term="pathname"
+                            label="comment"
+                            theme="github-light"
+                            crossorigin="anonymous"
+                            async>
+                    </script>
+                </section>
+
+            </article>
+        </main>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer-grounding">
+        <footer class="footer">
+            <a href="https://github.com/krisyotam" class="source-link">Kris Yotam (@krisyotam)</a>
+            <a href="https://gitserver.vercel.app/" class="source-link">Source</a>
+        </footer>
+    </div>
+
+    <script src="/pages/js/dark-mode.js"></script>
+</body>
+</html>

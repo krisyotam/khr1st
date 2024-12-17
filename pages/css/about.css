@@ -2,38 +2,31 @@
 .about-img {
     width: 20%;
     height: auto;
-    border-radius: 50%; /* Makes the image circular */
-    margin-top: -0.5rem; /* Moves the image up slightly */
-    margin-left: 1rem; /* Adds spacing between the image and text */
-    float: right; /* Aligns the image to the right */
-    object-fit: cover; /* Ensures the image doesn't stretch */
+    border-radius: 50%; /* Circular image */
+    margin-top: -0.5rem; /* Slightly moves the image up */
+    margin-left: 1rem; /* Spacing between image and text */
+    float: right; /* Aligns image to the right */
+    object-fit: cover; /* Prevents stretching of image */
 }
 
 /* Reset styles for navbar */
 .nav-links ul {
-    list-style: none; /* Ensure no list style */
+    list-style: none; /* Removes list style */
+    padding: 0; /* Removes padding */
+    margin: 0; /* Removes margin */
     text-decoration: none;
-    padding: 0; /* Remove padding */
-    margin: 0; /* Remove margin */
 }
 
 .nav-links li {
-    display: inline-block; /* Align list items horizontally */
-    margin: 0; /* Remove any margin */
-}
-
-/* Prevent dashes in the navbar */
-.nav-links ul li:before {
-    content: none; /* Removes the dash from navbar items */
+    display: inline-block; /* Horizontal list items */
 }
 
 /* Ensure About page only modifies the container content */
 .container h2,
 .container h3 {
     font-family: Inter, "Inter Fallback", sans-serif;
-    font-style: normal;
     font-weight: 700;
-    color: inherit; /* Inherits the color from global styles */
+    color: inherit; /* Inherit color from global styles */
 }
 
 .container h2 {
@@ -54,38 +47,105 @@
 
 .container ul li {
     margin-bottom: 0.5rem;
-    position: relative;
-    padding-left: 1.5rem;
+    padding-left: 1.5rem; /* Indentation */
 }
 
 /* Apply dash to Technical Contributions list items */
 .technical-contributions li {
     margin-bottom: 0.5rem;
-    position: relative;
     padding-left: 1.5rem;
 }
 
 .technical-contributions li:before {
-    content: "-"; /* Adds dashes to list items within Technical Contributions */
+    content: "-"; /* Adds dashes to list items */
     position: absolute;
     left: 0;
-    color: inherit; /* Inherits the color from global styles */
+    color: inherit; /* Inherits color from global styles */
     font-weight: 400;
 }
 
-/* Ensures no interference with general body text styles */
+/* General body text styles */
 .container p {
-    color: inherit; /* Inherits the color from global styles */
+    color: inherit; /* Inherits color */
     font-size: 16px;
     line-height: 24px;
 }
 
-/* Ensure no overriding of body text styles in dark mode */
+/* Dark mode adjustments */
 body.dark .container h2,
 body.dark .container h3 {
-    color: inherit; /* Inherits the color from global dark mode styles */
+    color: inherit;
 }
 
 body.dark .container ul li:before {
-    color: inherit; /* Keeps the list item bullet color consistent */
+    color: inherit;
+}
+
+/* Flap Styles */
+.flap {
+    margin-bottom: 1rem; /* Space between flaps */
+    border: 1px solid #ddd; /* Border around flaps */
+    border-radius: 8px; /* Rounded corners */
+    padding: 10px;
+}
+
+.flap-toggle {
+    background-color: #f4f4f4; /* Light background */
+    color: #333; /* Text color */
+    border: none;
+    padding: 10px;
+    text-align: left;
+    width: 100%;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.flap-toggle:hover {
+    background-color: #e0e0e0; /* Hover effect */
+}
+
+.flap-content {
+    display: none; /* Hide content by default */
+    margin-top: 10px;
+    padding-left: 20px; /* Indentation for content */
+}
+
+.flap-content ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.flap-content li {
+    margin-bottom: 0.5rem;
+}
+
+/* If the flap is open, display the content */
+.flap.open .flap-content {
+    display: block;
+}
+
+/* Dark Mode Flap Styles */
+body.dark .flap {
+    border-color: #444; /* Darker border for flaps in dark mode */
+    background-color: #333; /* Dark background for flaps */
+}
+
+body.dark .flap-toggle {
+    background-color: #444; /* Darker background for toggle */
+    color: #fff; /* Light text color */
+}
+
+body.dark .flap-toggle:hover {
+    background-color: #555; /* Slightly lighter hover effect */
+}
+
+body.dark .flap-content {
+    background-color: #222; /* Darker background for content */
+    color: #fff; /* Light text color */
+}
+
+body.dark .flap-content ul li {
+    color: #ccc; /* Light text color for list items */
 }

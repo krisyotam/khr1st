@@ -5,7 +5,7 @@
       "date": "Dec 14, 2024",
       "category": "Competitive Programming",
       "content": "The Hungarian Algorithm is a powerful tool for solving assignment problems, commonly found in optimization tasks. This post delves into its implementation and how it can be used to solve real-world problems efficiently.",
-      "likes": 150,
+      "likes": 5,
       "url": "/posts/public/hungarian-algorithm.html",
       "series": "Competitive Programming",
       "series-url": "/series/html/competitive-programming.html"
@@ -15,7 +15,7 @@
       "date": "Dec 13, 2024",
       "category": "Embedded Systems",
       "content": "As IoT devices become more ubiquitous, understanding their security architecture is critical. This post covers the challenges and solutions for securing IoT systems, focusing on encryption, secure boot, and firmware updates.",
-      "likes": 145,
+      "likes": 5,
       "url": "/posts/public/secure-iot-architecture.html",
       "series": "Embedded Systems",
       "series-url": "/series/html/embedded-systems.html"
@@ -25,7 +25,7 @@
       "date": "Dec 12, 2024",
       "category": "Dark Web",
       "content": "The dark web hosts a variety of illegal markets, but it also facilitates privacy and freedom of expression. This post examines the economic models that power these hidden markets and the role they play in global cybercrime.",
-      "likes": 130,
+      "likes": 15,
       "url": "/posts/public/dark-web-economies.html",
       "series": "Dark Web",
       "series-url": "/series/html/dark-web.html"
@@ -35,7 +35,7 @@
       "date": "Dec 11, 2024",
       "category": "Networking Hardware",
       "content": "Setting up high availability networks requires careful router configuration. This post discusses advanced techniques like failover routing, load balancing, and redundancy to ensure uninterrupted network services.",
-      "likes": 140,
+      "likes": 5,
       "url": "/posts/public/high-availability-routing.html",
       "series": "Networking Hardware",
       "series-url": "/series/html/networking-hardware.html"
@@ -45,7 +45,7 @@
       "date": "Dec 10, 2024",
       "category": "Software Development",
       "content": "Agile methodologies have revolutionized the software development life cycle (SDLC). This post dives into how agile teams approach development, from sprint planning to continuous integration and delivery.",
-      "likes": 165,
+      "likes": 5,
       "url": "/posts/public/agile-sdcl-process.html",
       "series": "Software Development",
       "series-url": "/series/html/software-development.html"
@@ -55,7 +55,7 @@
       "date": "Dec 9, 2024",
       "category": "Ethical Hacking",
       "content": "Penetration testing is a core part of ethical hacking. This post explores the tools and techniques used by ethical hackers to find vulnerabilities in networks and systems before malicious actors can exploit them.",
-      "likes": 160,
+      "likes": 5,
       "url": "/posts/public/penetration-testing-tools.html",
       "series": "Ethical Hacking",
       "series-url": "/series/html/ethical-hacking.html"
@@ -65,7 +65,7 @@
       "date": "Dec 8, 2024",
       "category": "Bug Bounty",
       "content": "Bug bounty programs are a great way for security researchers to earn rewards for finding vulnerabilities. This post provides a strategic approach to maximizing payouts by targeting high-value programs and vulnerabilities.",
-      "likes": 170,
+      "likes": 5,
       "url": "/posts/public/bug-bounty-strategies.html",
       "series": "Bug Bounty",
       "series-url": "/series/html/bug-bounty.html"
@@ -75,7 +75,7 @@
       "date": "Dec 7, 2024",
       "category": "Software Architecture",
       "content": "Microservices are rapidly becoming the architecture of choice for scalable, resilient applications. This post examines the principles behind microservices and how organizations can effectively implement them in large-scale systems.",
-      "likes": 175,
+      "likes": 5,
       "url": "/posts/public/microservices-architecture.html",
       "series": "Software Architecture",
       "series-url": "/series/html/software-architecture.html"
@@ -85,8 +85,8 @@
       "date": "Aug 31, 2024",
       "category": "Computer Architecture",
       "content": "Byzantine Fault Tolerance (BFT) is critical in ensuring blockchain networks remain secure and functional even when some participants are compromised. This post explores how BFT works and its role in decentralized systems like Bitcoin and Ethereum.",
-      "likes": 180,
-      "url": "/posts/public/byzantine-fault-tolerance.html",
+      "likes": 5,
+      "url": "/posts/public/post2.html",
       "series": "Blockchain Architecture",
       "series-url": "/series/html/computer-architecture.html"
     },
@@ -95,8 +95,8 @@
       "date": "Aug 30, 2024",
       "category": "Storage Solutions",
       "content": "As data continues to grow, traditional storage solutions are no longer sufficient. This post explores distributed storage systems and how they are used to scale data storage across multiple nodes while ensuring data availability and redundancy.",
-      "likes": 185,
-      "url": "/posts/public/distributed-storage.html",
+      "likes": 5,
+      "url": "/posts/public/post1.html",
       "series": "Storage Solutions",
       "series-url": "/series/html/storage-solutions.html"
     }

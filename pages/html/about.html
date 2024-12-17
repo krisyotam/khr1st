@@ -40,16 +40,86 @@
         <p>
             My focus is on developer experience, and I'm dedicated to creating tools and platforms that make the web faster and more accessible.
         </p>
-        
-        <h3>Technical Contributions</h3>
-        <ul class="technical-contributions">
-            <li>Contributed to MooTools as part of their core team and led the MooTools Forge package repository.</li>
-            <li>Authored "Smashing Node.js: JavaScript Everywhere."</li>
-            <li>Helped develop several critical projects in the Node.js ecosystem, including Express.js, Connect, and Mongoose.</li>
-            <li>Authored Socket.IO, powering real-time communication for major apps like Notion and Coinbase.</li>
-            <li>Built Hyper, a cross-platform terminal emulator.</li>
-            <li>Designed and co-authored Next.js, a leading React framework.</li>
-        </ul>
+
+        <!-- Flaps Section -->
+        <div class="flaps">
+            <!-- Technical Contributions Flap -->
+            <div class="flap">
+                <button class="flap-toggle">Technical Contributions</button>
+                <div class="flap-content">
+                    <ul class="technical-contributions">
+                        <li>Contributed to MooTools as part of their core team and led the MooTools Forge package repository.</li>
+                        <li>Authored "Smashing Node.js: JavaScript Everywhere."</li>
+                        <li>Helped develop several critical projects in the Node.js ecosystem, including Express.js, Connect, and Mongoose.</li>
+                        <li>Authored Socket.IO, powering real-time communication for major apps like Notion and Coinbase.</li>
+                        <li>Built Hyper, a cross-platform terminal emulator.</li>
+                        <li>Designed and co-authored Next.js, a leading React framework.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- My Devices Flap -->
+            <div class="flap">
+                <button class="flap-toggle">My Devices</button>
+                <div class="flap-content">
+                    <p>I use a variety of devices, all minimalist setups, all optimized for productivity and development.</p>
+                    <ul>
+                        <li>MacBook Pro (MacBookPro9,2) as a daily driver for coreboot, ports, and engineering design.</li>
+                        <li>Headless MacBook Pro (MacBookPro9,1) for development, and coreboot.</li>
+                        <li>MacBook Pro (T420) for pentesting.</li>
+                        <li>Custom-built Linux PC for high-performance computing & ML tasks.</li>
+                        <li>Raspberry Pi for experimenting with IoT and light development.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- My Software & OS Flap -->
+            <div class="flap">
+                <button class="flap-toggle">My Software & OS</button>
+                <div class="flap-content">
+                    <p>I believe in using powerful, efficient tools that fit my needs. Here's a list of the key software and OS I use:</p>
+                    <ul>
+                        <li>Linux (Gentoo Linux) as my primary OS for its flexibility and control.</li>
+                        <li>Linux (Arch Linux) as my pentesting OS for its BlackArch Repo.</li>
+                        <li>Linux (Asashi Linux) as my development OS for mac compatibility.</li>
+                        <li>Docker for containerization and managing environments.</li>
+                        <li>Firefox with privacy-focused extensions.</li>
+                        <li>Firefox with privacy-focused extensions.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Philosophy Flap -->
+            <div class="flap">
+                <button class="flap-toggle">My Philosophy</button>
+                <div class="flap-content">
+                    <p>
+                        "Everything should be as simple as it can be, but not simpler." This mantra drives my work. I believe in simplicity, clarity, and frugality in design. My goal is to create software that prioritizes usability and performance, designed for experienced users who value simplicity and efficiency.
+                    </p>
+                    <p>
+                        I view complexity as the enemy of good software. By stripping away unnecessary features and focusing on the core purpose, I aim to craft software that is not only easy to maintain but also fast, secure, and sustainable. True progress is achieved through intentional subtraction, where each decision is made with purpose, and every line of code has meaning.
+                    </p>
+                    <p>
+                        My work is rooted in the belief that simplicity is the key to ingenuity. Software should empower users, respect their privacy, and prioritize functionality over form.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Contact Flap -->
+            <div class="flap">
+                <button class="flap-toggle">Contact</button>
+                <div class="flap-content">
+                    <p>If you’d like to get in touch, feel free to reach out to me through the following channels:</p>
+                    <ul>
+                        <li><a href="mailto:krisyotam@protonmail.com">Email</a></li>
+                        <li><a href="https://github.com/krisyotam" target="_blank">GitHub</a></li>
+                        <li><a href="https://www.linkedin.com/in/krisyotam/" target="_blank">LinkedIn</a></li>
+                    </ul>
+                    <p>I'm always open to discussing new projects, collaborations, or opportunities!</p>
+                </div>
+            </div>
+        </div>
+
     </div>
     <div class="footer-grounding">
         <footer class="footer">
@@ -57,6 +127,16 @@
             <a href="https://gitserver.vercel.app/" class="source-link">Source</a>
         </footer>
     </div>
+
+    <!-- JavaScript to toggle all flaps -->
+    <script>
+        document.querySelectorAll('.flap-toggle').forEach(button => {
+            button.addEventListener('click', () => {
+                const flap = button.parentElement;
+                flap.classList.toggle('open'); // Toggle the 'open' class to show or hide content
+            });
+        });
+    </script>
 
     <script src="/pages/js/dark-mode.js"></script> <!-- Ensure script is included -->
 </body>

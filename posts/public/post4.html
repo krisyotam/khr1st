@@ -3,106 +3,164 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>post4</title>
-    <link rel="stylesheet" href="/blogpost/css/blogpost.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/2.1.3/marked.min.js"></script>
-    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-AMS_HTML"></script>
-    <script>
-        MathJax.Hub.Config({
-            tex2jax: {
-                inlineMath: [['$', '$'], ['\\(', '\\)']],
-                displayMath: [['$$', '$$'], ['\\[', '\\]']],
-                processEscapes: true
-            }
-        });
-    </script>
+    <title>Untitled</title>
+    <link rel="stylesheet" href="/pages/css/styles.css">
+    <link rel="stylesheet" href="/pages/css/blogpost.css">
 </head>
 <body>
-    <header>
-        <h5>Kris Yotam</h5>
-        <nav>
-            <a href="/index.html">Home</a>
-            <a href="/pages/html/about.html">About</a>
-            <a href="/pages/html/archive.html">Archive</a>
-            <a href="/pages/html/categories.html">Categories</a>
-            <a href="https://gitserver.vercel.app/">Git</a>
-        </nav>
-    </header>
-   
-    <main>
-        <div class="content-wrapper">
-            <article class="blog-post" id="blog-post">
-                <!-- Blog post content will be injected here -->
-                <h1>Exploring Trigonometry</h1>
-<h6>A brief description of your blog post.</h6>
-<h6>2024-09-29</h6>
-<p>Trigonometry is a branch of mathematics that studies the relationships between the sides and angles of triangles. It has many applications in fields such as physics, engineering, and computer graphics.</p>
+    <div class="container">
+        <header>
+            <nav>
+                <div class="logo">
+                    <h1><a href="/index.html">Kris Yotam</a></h1>
+                </div>
+                <div class="nav-links">
+                    <ul>
+                        <li><a href="/pages/html/about.html">About</a></li>
+                        <li><a href="/pages/html/categories.html">Shelves</a></li>
+                        <li>
+                            <label class="switch">
+                                <input type="checkbox" id="darkModeToggle">
+                                <span class="slider"></span>
+                            </label>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
 
-            </article>
-
-            <aside class="table-of-contents">
-                <h2 class="toc-title">Table Of Contents</h2>
-                <ul id="toc-list">
-                    <!-- TOC items will be injected here -->
+        <main>
+            <article class="post">
+                <h1>Untitled</h1>
+                <p class="meta">
+                    <a href="https://x.com/krisyotam" target="_blank">@krisyotam</a> | 
+                    <span class="date" data-date="Unknown">Invalid Date </span>
+                </p>
+                <ul class="tags">
+                    
                 </ul>
-            </aside>
-        </div>
-    </main>
+                <section class="content">
+                    <hr>
+<h2>title: Just see the light through.
+date: June 23, 2021
+tags: [Optimization, Performance, Web Development, Caching]</h2>
+<h2>Introduction</h2>
+<p>In this post, we explore how to improve website performance by focusing on various optimization techniques. We discuss strategies like compressing images, reducing JavaScript payloads, and leveraging caching to ensure a faster user experience.</p>
+<p>By understanding these techniques, you can build websites that:</p>
+<ul>
+<li>Load quickly</li>
+<li>Improve user engagement</li>
+<li>Rank better in search engines</li>
+</ul>
+<hr>
+<h2><strong>1. Image Optimization</strong></h2>
+<p>Images are often the largest assets on a website. By optimizing images, you can reduce load times significantly.</p>
+<ul>
+<li><strong>Tools</strong>:<ul>
+<li><a href="https://imageoptim.com">ImageOptim</a></li>
+<li><a href="https://tinypng.com">TinyPNG</a></li>
+</ul>
+</li>
+<li>Use the following steps to optimize:<ol>
+<li>Resize images to appropriate dimensions.</li>
+<li>Compress them using tools mentioned above.</li>
+</ol>
+</li>
+</ul>
+<p>Example:</p>
+<blockquote>
+<p>&quot;A 1MB image reduced to 300KB can drastically improve performance!&quot;</p>
+</blockquote>
+<hr>
+<h2><strong>2. JavaScript Performance</strong></h2>
+<p>Minify and bundle your JavaScript files to reduce the number of requests and the size of each file. Tools like Webpack or Rollup can help automate this process.</p>
+<p>Here’s an example of inline code for JavaScript:</p>
+<pre><code class="language-javascript">function sayHello() {
+  console.log(&quot;Hello, world!&quot;);
+}
+sayHello();
+</code></pre>
+<h3>Code Block Example</h3>
+<p>Use triple backticks to denote blocks:</p>
+<pre><code>function optimize() {
+  return &quot;Faster Web!&quot;;
+}
+</code></pre>
+<hr>
+<h2><strong>3. Caching</strong></h2>
+<p>Leverage browser caching to store static assets like CSS, JavaScript, and images locally on the user&#39;s device.</p>
+<ul>
+<li><strong>Benefits</strong>:<ul>
+<li>Faster load times for returning visitors.</li>
+<li>Reduced server load.</li>
+</ul>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Asset Type</th>
+<th>Cache Duration</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>CSS Files</td>
+<td>1 year</td>
+</tr>
+<tr>
+<td>JavaScript</td>
+<td>1 month</td>
+</tr>
+<tr>
+<td>Images</td>
+<td>6 months</td>
+</tr>
+</tbody></table>
+<p>To configure caching, modify your <code>.htaccess</code> file:</p>
+<pre><code class="language-apache">&lt;IfModule mod_expires.c&gt;
+  ExpiresActive On
+  ExpiresByType image/jpg &quot;access plus 1 year&quot;
+  ExpiresByType text/css &quot;access plus 1 year&quot;
+&lt;/IfModule&gt;
+</code></pre>
+<hr>
+<h2>Advanced Features</h2>
+<h3><strong>Strikethrough for Deprecated Techniques</strong></h3>
+<p>Certain optimization methods, like Flash content, are no longer relevant:</p>
+<p><del>Use Flash for animations.</del></p>
+<h3><strong>Task List for Optimization Workflow</strong></h3>
+<ul>
+<li><input checked="" disabled="" type="checkbox"> Optimize images</li>
+<li><input disabled="" type="checkbox"> Minify JavaScript</li>
+<li><input disabled="" type="checkbox"> Enable caching</li>
+</ul>
+<hr>
+<h2>Inline HTML Example</h2>
+<p>For more customization, you can include inline HTML like this:</p>
+<p><u>Underlined text using HTML</u></p>
+<hr>
+<h2>Summary</h2>
+<p>By applying these techniques, your website will be faster, more efficient, and user-friendly. Let’s make the web a better place, one optimization at a time.</p>
+<h3>References</h3>
+<ul>
+<li><a href="https://pagespeed.web.dev">Google PageSpeed Insights</a></li>
+<li><a href="https://developer.mozilla.org">MDN Web Docs</a></li>
+<li><a href="https://web.dev/performance/">Web Performance Optimization</a></li>
+</ul>
 
-    <!-- Utterances Comments Section -->
-    <section id="comments">
-        <h3>Comments</h3>
-        <script src="https://utteranc.es/client.js"
-                repo="krisyotam/khr1st"  
-                issue-term="pathname"    
-                theme="github-light"     
-                crossorigin="anonymous">
-        </script>
-    </section>
+                </section>
+            </article>
+        </main>
+    </div>
 
-    <footer>
-        <p>&copy; Crafted with ❤️ by Kris Yotam</p>
-    </footer>
+    <div class="footer-grounding">
+        <footer class="footer">
+            <a href="https://github.com/krisyotam" class="source-link">Kris Yotam (@krisyotam)</a>
+            <a href="https://gitserver.vercel.app/" class="source-link">Source</a>
+        </footer>
+    </div>
 
-    <script>
-        function generateTOC() {
-            const tocList = document.getElementById("toc-list");
-            const sections = document.querySelectorAll("article h3");
-
-            sections.forEach(section => {
-                const sectionId = section.id;
-                const sectionTitle = section.innerText;
-
-                const listItem = document.createElement("li");
-                listItem.innerHTML = `<a href="#${sectionId}">${sectionTitle}</a>`;
-                tocList.appendChild(listItem);
-            });
-        }
-
-        document.addEventListener("DOMContentLoaded", function() {
-            generateTOC(); // Call your function to generate the Table of Contents
-            
-            // Ensure the content is loaded before typesetting
-            setTimeout(() => {
-                MathJax.Hub.Queue(["Typeset", MathJax.Hub]);
-            }, 0); // You can adjust the delay if necessary
-        });
-    </script>
+    <script src="/pages/js/dark-mode.js"></script>
+    <script src="/pages/js/time_elapsed.js"></script>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
