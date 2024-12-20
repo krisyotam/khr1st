@@ -6,7 +6,7 @@ fetch('/pages/json/posts.json')
 
         // Create an array to store posts with their last modified dates
         const postsWithLastModified = await Promise.all(
-            data.posts.map(async post => {
+            data.blog_posts.map(async post => { // Access `blog_posts` instead of `posts`
                 try {
                     // Make a HEAD request to fetch the Last-Modified header
                     const response = await fetch(post.url, { method: 'HEAD' });

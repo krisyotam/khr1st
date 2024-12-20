@@ -1,0 +1,94 @@
+{
+  "posts": [
+    {
+      "title": "Optimizing Performance with the Hungarian Algorithm",
+      "date": "Dec 14, 2024",
+      "preview": "The Hungarian Algorithm is a powerful tool for solving assignment problems, commonly found in optimization tasks. This post delves into its implementation and how it can be used to solve real-world problems efficiently.",
+      "url": "/posts/public/post1.html",
+      "category": "Competitive Programming",
+      "category-url": "/categories/html/competitive-programming.html",
+      "tags": ["algorithm", "optimization", "assignment"]
+    },
+    {
+      "title": "Understanding the Architecture of Secure IoT Systems",
+      "date": "Dec 13, 2024",
+      "preview": "As IoT devices become more ubiquitous, understanding their security architecture is critical. This post covers the challenges and solutions for securing IoT systems, focusing on encryption, secure boot, and firmware updates.",
+      "url": "/posts/public/post2.html",
+      "category": "Embedded Systems",
+      "category-url": "/categories/html/embedded-systems.html",
+      "tags": ["IoT", "security", "encryption"]
+    },
+    {
+      "title": "The Dark Web's Hidden Economies: A Closer Look",
+      "date": "Dec 12, 2024",
+      "preview": "The dark web hosts a variety of illegal markets, but it also facilitates privacy and freedom of expression. This post examines the economic models that power these hidden markets and the role they play in global cybercrime.",
+      "url": "/posts/public/post3.html",
+      "category": "Dark Web",
+      "category-url": "/categories/html/dark-web.html",
+      "tags": ["dark web", "cybercrime", "economics"]
+    },
+    {
+      "title": "Advanced Router Configurations for High Availability Networks",
+      "date": "Dec 11, 2024",
+      "preview": "Setting up high availability networks requires careful router configuration. This post discusses advanced techniques like failover routing, load balancing, and redundancy to ensure uninterrupted network services.",
+      "url": "/posts/public/post4.html",
+      "category": "Networking Hardware",
+      "category-url": "/categories/html/networking-hardware.html",
+      "tags": ["networking", "redundancy", "failover"]
+    },
+    {
+      "title": "Exploring the Software Development Life Cycle in Agile Teams",
+      "date": "Dec 10, 2024",
+      "preview": "Agile methodologies have revolutionized the software development life cycle (SDLC). This post dives into how agile teams approach development, from sprint planning to continuous integration and delivery.",
+      "url": "/posts/public/post5.html",
+      "category": "Software Development",
+      "category-url": "/categories/html/software-development.html",
+      "tags": ["agile", "SDLC", "development"]
+    },
+    {
+      "title": "Harnessing Ethical Hacking for Penetration Testing",
+      "date": "Dec 9, 2024",
+      "preview": "Penetration testing is a core part of ethical hacking. This post explores the tools and techniques used by ethical hackers to find vulnerabilities in networks and systems before malicious actors can exploit them.",
+      "url": "/posts/public/post6.html",
+      "category": "Ethical Hacking",
+      "category-url": "/categories/html/ethical-hacking.html",
+      "tags": ["ethical hacking", "penetration testing", "security"]
+    },
+    {
+      "title": "Maximizing Bug Bounty Payouts: Strategies for Success",
+      "date": "Dec 8, 2024",
+      "preview": "Bug bounty programs are a great way for security researchers to earn rewards for finding vulnerabilities. This post provides a strategic approach to maximizing payouts by targeting high-value programs and vulnerabilities.",
+      "url": "/posts/public/post7.html",
+      "category": "Bug Bounty",
+      "category-url": "/categories/html/bug-bounty.html",
+      "tags": ["bug bounty", "security research", "vulnerabilities"]
+    },
+    {
+      "title": "The Future of Software Architecture: Microservices in Action",
+      "date": "Dec 7, 2024",
+      "preview": "Microservices are rapidly becoming the architecture of choice for scalable, resilient applications. This post examines the principles behind microservices and how organizations can effectively implement them in large-scale systems.",
+      "url": "/posts/public/post8.html",
+      "category": "Software Architecture",
+      "category-url": "/categories/html/software-architecture.html",
+      "tags": ["microservices", "architecture", "scalability"]
+    },
+    {
+      "title": "Exploring the Byzantine Fault Tolerance in Blockchain Networks",
+      "date": "Aug 31, 2024",
+      "preview": "Byzantine Fault Tolerance (BFT) is critical in ensuring blockchain networks remain secure and functional even when some participants are compromised. This post explores how BFT works and its role in decentralized systems like Bitcoin and Ethereum.",
+      "url": "/posts/public/post9.html",
+      "category": "Blockchain Architecture",
+      "category-url": "/categories/html/computer-architecture.html",
+      "tags": ["blockchain", "BFT", "security"]
+    },
+    {
+      "title": "Scaling Data Storage with Distributed Systems",
+      "date": "Aug 30, 2024",
+      "preview": "As data continues to grow, traditional storage solutions are no longer sufficient. This post explores distributed storage systems and how they are used to scale data storage across multiple nodes while ensuring data availability and redundancy.",
+      "url": "/posts/public/post10.html",
+      "category": "Storage Solutions",
+      "category-url": "/categories/html/storage-solutions.html",
+      "tags": ["storage", "distributed systems", "data"]
+    }
+  ]
+}

@@ -1,8 +1,10 @@
 ---
-title: Just see the light through.
-date: June 23, 2021
-tags: [Optimization, Performance, Web Development, Caching]
+title: "Optimizing Performance with the Hungarian Algorithm"
+date: "Dec 14, 2024"
+category: "HackTheBox WriteUps"
+tags: [optimization, performance, web development]
 ---
+
 
 
 ## Introduction

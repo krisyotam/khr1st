@@ -1,104 +1,48 @@
 {
-  "posts": [
+  "blog_posts": [
     {
       "title": "Optimizing Performance with the Hungarian Algorithm",
       "date": "Dec 14, 2024",
-      "category": "Competitive Programming",
-      "content": "The Hungarian Algorithm is a powerful tool for solving assignment problems, commonly found in optimization tasks. This post delves into its implementation and how it can be used to solve real-world problems efficiently.",
-      "likes": 5,
-      "url": "/posts/public/hungarian-algorithm.html",
-      "series": "Competitive Programming",
-      "series-url": "/series/html/competitive-programming.html"
-    },
-    {
-      "title": "Understanding the Architecture of Secure IoT Systems",
-      "date": "Dec 13, 2024",
-      "category": "Embedded Systems",
-      "content": "As IoT devices become more ubiquitous, understanding their security architecture is critical. This post covers the challenges and solutions for securing IoT systems, focusing on encryption, secure boot, and firmware updates.",
-      "likes": 5,
-      "url": "/posts/public/secure-iot-architecture.html",
-      "series": "Embedded Systems",
-      "series-url": "/series/html/embedded-systems.html"
-    },
-    {
-      "title": "The Dark Web's Hidden Economies: A Closer Look",
-      "date": "Dec 12, 2024",
-      "category": "Dark Web",
-      "content": "The dark web hosts a variety of illegal markets, but it also facilitates privacy and freedom of expression. This post examines the economic models that power these hidden markets and the role they play in global cybercrime.",
-      "likes": 15,
-      "url": "/posts/public/dark-web-economies.html",
-      "series": "Dark Web",
-      "series-url": "/series/html/dark-web.html"
-    },
-    {
-      "title": "Advanced Router Configurations for High Availability Networks",
-      "date": "Dec 11, 2024",
-      "category": "Networking Hardware",
-      "content": "Setting up high availability networks requires careful router configuration. This post discusses advanced techniques like failover routing, load balancing, and redundancy to ensure uninterrupted network services.",
-      "likes": 5,
-      "url": "/posts/public/high-availability-routing.html",
-      "series": "Networking Hardware",
-      "series-url": "/series/html/networking-hardware.html"
-    },
-    {
-      "title": "Exploring the Software Development Life Cycle in Agile Teams",
-      "date": "Dec 10, 2024",
-      "category": "Software Development",
-      "content": "Agile methodologies have revolutionized the software development life cycle (SDLC). This post dives into how agile teams approach development, from sprint planning to continuous integration and delivery.",
-      "likes": 5,
-      "url": "/posts/public/agile-sdcl-process.html",
-      "series": "Software Development",
-      "series-url": "/series/html/software-development.html"
-    },
-    {
-      "title": "Harnessing Ethical Hacking for Penetration Testing",
-      "date": "Dec 9, 2024",
-      "category": "Ethical Hacking",
-      "content": "Penetration testing is a core part of ethical hacking. This post explores the tools and techniques used by ethical hackers to find vulnerabilities in networks and systems before malicious actors can exploit them.",
-      "likes": 5,
-      "url": "/posts/public/penetration-testing-tools.html",
-      "series": "Ethical Hacking",
-      "series-url": "/series/html/ethical-hacking.html"
-    },
-    {
-      "title": "Maximizing Bug Bounty Payouts: Strategies for Success",
-      "date": "Dec 8, 2024",
-      "category": "Bug Bounty",
-      "content": "Bug bounty programs are a great way for security researchers to earn rewards for finding vulnerabilities. This post provides a strategic approach to maximizing payouts by targeting high-value programs and vulnerabilities.",
-      "likes": 5,
-      "url": "/posts/public/bug-bounty-strategies.html",
-      "series": "Bug Bounty",
-      "series-url": "/series/html/bug-bounty.html"
-    },
-    {
-      "title": "The Future of Software Architecture: Microservices in Action",
-      "date": "Dec 7, 2024",
-      "category": "Software Architecture",
-      "content": "Microservices are rapidly becoming the architecture of choice for scalable, resilient applications. This post examines the principles behind microservices and how organizations can effectively implement them in large-scale systems.",
-      "likes": 5,
-      "url": "/posts/public/microservices-architecture.html",
-      "series": "Software Architecture",
-      "series-url": "/series/html/software-architecture.html"
-    },
-    {
-      "title": "Exploring the Byzantine Fault Tolerance in Blockchain Networks",
-      "date": "Aug 31, 2024",
-      "category": "Computer Architecture",
-      "content": "Byzantine Fault Tolerance (BFT) is critical in ensuring blockchain networks remain secure and functional even when some participants are compromised. This post explores how BFT works and its role in decentralized systems like Bitcoin and Ethereum.",
-      "likes": 5,
-      "url": "/posts/public/post2.html",
-      "series": "Blockchain Architecture",
-      "series-url": "/series/html/computer-architecture.html"
-    },
-    {
-      "title": "Scaling Data Storage with Distributed Systems",
-      "date": "Aug 30, 2024",
-      "category": "Storage Solutions",
-      "content": "As data continues to grow, traditional storage solutions are no longer sufficient. This post explores distributed storage systems and how they are used to scale data storage across multiple nodes while ensuring data availability and redundancy.",
-      "likes": 5,
+      "preview": "## Introduction In this post, we explore how to improve website performance by focusing on various optimization techniques. We discuss...",
       "url": "/posts/public/post1.html",
-      "series": "Storage Solutions",
-      "series-url": "/series/html/storage-solutions.html"
+      "category": "Competitive Programming",
+      "category-url": "/categories/html/competitive-programming.html",
+      "tags": [],
+      "formattedDate": "December 14, 2024",
+      "timeAgoText": ""
+    },
+    {
+      "title": "Optimizing Performance with the Hungarian Algorithm",
+      "date": "Dec 14, 2024",
+      "preview": "## Introduction In this post, we explore how to improve website performance by focusing on various optimization techniques. We discuss...",
+      "url": "/posts/public/post2.html",
+      "category": "Dynamic Programming",
+      "category-url": "/categories/html/dynamic-programming.html",
+      "tags": [],
+      "formattedDate": "December 14, 2024",
+      "timeAgoText": ""
+    },
+    {
+      "title": "Optimizing Performance with the Hungarian Algorithm",
+      "date": "Dec 14, 2024",
+      "preview": "## Introduction In this post, we explore how to improve website performance by focusing on various optimization techniques. We discuss...",
+      "url": "/posts/public/post3.html",
+      "category": "HackTheBox WriteUps",
+      "category-url": "/categories/html/hackthebox-writeups.html",
+      "tags": [],
+      "formattedDate": "December 14, 2024",
+      "timeAgoText": ""
+    },
+    {
+      "title": "Optimizing Performance with the Hungarian Algorithm",
+      "date": "Dec 14, 2024",
+      "preview": "## Introduction In this post, we explore how to improve website performance by focusing on various optimization techniques. We discuss...",
+      "url": "/posts/public/post4.html",
+      "category": "TryHackMe WriteUps",
+      "category-url": "/categories/html/tryhackme-writeups.html",
+      "tags": [],
+      "formattedDate": "December 14, 2024",
+      "timeAgoText": ""
     }
   ]
 }

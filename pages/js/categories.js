@@ -3,7 +3,7 @@ async function fetchPosts() {
     try {
         const response = await fetch('/pages/json/posts.json');
         const data = await response.json();
-        populateCategories(data);
+        populateCategories(data);  // Pass the data to the populateCategories function
     } catch (error) {
         console.error('Error fetching the posts data:', error);
     }
@@ -17,17 +17,16 @@ function populateCategories(data) {
     const categoriesMap = {};
 
     // Iterate over all posts and populate categories counts
-    data.posts.forEach(post => {
-        const categories = post.category.split(','); // Split categories for each post
+    data.blog_posts.forEach(post => { // Change `data.posts` to `data.blog_posts`
+        const category = post.category.trim(); // Ensure the category is a single string and not an array
 
-        // Iterate over each category and update the count
-        categories.forEach(category => {
-            category = category.trim(); // Clean up extra spaces
-            if (!categoriesMap[category]) {
-                categoriesMap[category] = { count: 0, category_url: `/category/${category.toLowerCase().replace(/\s+/g, '-')}.html` };
-            }
-            categoriesMap[category].count++;
-        });
+        // If the category doesn't exist in the map, add it with a count of 0
+        if (!categoriesMap[category]) {
+            categoriesMap[category] = { count: 0, category_url: post['category-url'] }; // Use the category-url from the post
+        }
+
+        // Increment the count for the category
+        categoriesMap[category].count++;
     });
 
     // Create a row for each category and number of articles
@@ -37,7 +36,7 @@ function populateCategories(data) {
         // Create Category cell with a link
         const categoryCell = row.insertCell(0);
         const categoryLink = document.createElement('a');
-        categoryLink.href = categoriesMap[category].category_url; // Use the generated category URL
+        categoryLink.href = categoriesMap[category].category_url; // Use the category URL from the map
         categoryLink.textContent = category;
         categoryCell.appendChild(categoryLink);
 

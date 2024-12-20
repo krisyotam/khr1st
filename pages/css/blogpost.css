@@ -4,6 +4,9 @@
     --text-color: #111827;
     --muted-color: #6B7280;
     --border-color: #E5E7EB;
+    --box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    --border-radius: 16px;
+    --bento-bg-color: #F3F4F6;
     --transition-duration: 0.3s;
 }
 
@@ -12,6 +15,8 @@
     --text-color: #ffffff;
     --muted-color: #6B7280;
     --border-color: #374151;
+    --box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    --bento-bg-color: #2D2D2D;
 }
 
 /* Full Page Layout */
@@ -89,7 +94,15 @@ h1 {
     max-width: 800px; /* Keeps post content from stretching too wide */
     margin-left: auto;
     margin-right: auto;
-    padding: 0 20px; /* Adds padding to the sides for better readability */
+    padding: 30px; /* Adds space between the border and content */
+    background-color: var(--bento-bg-color); /* Updated to #F3F4F6 */
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    transition: box-shadow var(--transition-duration) ease;
+}
+
+.content:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Enhance shadow on hover */
 }
 
 /* Comments Section */
@@ -145,6 +158,7 @@ a:hover {
 
 .dark .content {
     color: var(--text-color);
+    background-color: var(--bento-bg-color); /* Dark mode Bento box color */
 }
 
 /* Footer styles */

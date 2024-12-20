@@ -1,7 +1,15 @@
 {
   "dependencies": {
     "date-fns": "^4.1.0",
+    "front-matter": "^4.0.2",
+    "fs": "^0.0.1-security",
+    "gray-matter": "^4.0.3",
     "js-yaml": "^4.1.0",
-    "marked": "^15.0.4"
-  }
+    "lodash": "^4.17.21",
+    "markdown-it": "^14.1.0",
+    "marked": "^15.0.4",
+    "mkdirp": "^3.0.1",
+    "path": "^0.12.7"
+  },
+  "type": "module"
 }
