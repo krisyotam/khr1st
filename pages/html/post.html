@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Post Title</title>
+    <link rel="stylesheet" href="/pages/css/styles.css">
+    <link rel="stylesheet" href="/pages/css/blogpost.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <nav>
+                <div class="logo">
+                    <h1><a href="/index.html">Kris Yotam</a></h1>
+                </div>
+                <div class="nav-links">
+                    <ul>
+                        <li><a href="/pages/html/about.html">About</a></li>
+                        <li><a href="/pages/html/categories.html">Shelves</a></li>
+                        <li>
+                            <label class="switch">
+                                <input type="checkbox" id="darkModeToggle">
+                                <span class="slider"></span>
+                            </label>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+
+        <main>
+            <article class="post">
+                <h1 id="postTitle">Loading...</h1>
+                <p class="meta">
+                    <a id="authorLink" href="" target="_blank">@krisyotam</a> | 
+                    <span class="date" id="postDate">Loading...</span>
+                </p>
+                <section class="content" id="postContent">
+                    <!-- Post content will be injected dynamically -->
+                </section>
+            </article>
+        </main>
+    </div>
+
+    <div class="footer-grounding">
+        <footer class="footer">
+            <a href="https://github.com/krisyotam" class="source-link">Kris Yotam (@krisyotam)</a>
+            <a href="https://gitserver.vercel.app/" class="source-link">Source</a>
+        </footer>
+    </div>
+
+    <script src="/pages/js/dark-mode.js"></script>
+    <script src="/pages/js/time_elapsed.js"></script>
+    <script>
+        const API_URL = "https://kris-yotam.ghost.io/ghost/api/content/posts/";
+        const API_KEY = "3956cf71a4a7a35e5ead9bf2d6";
+
+        // Get the post slug from the URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const slug = urlParams.get('slug'); // Use slug instead of ID
+
+        async function fetchPost() {
+            try {
+                console.log(`Fetching post with slug: ${slug}`);
+                const response = await fetch(`${API_URL}?key=${API_KEY}&filter=slug:${slug}&include=tags,authors`);
+                if (!response.ok) {
+                    throw new Error(`Network response was not ok: ${response.statusText}`);
+                }
+                const data = await response.json();
+                console.log('Post fetched successfully:', data);
+
+                populatePost(data.posts[0]);
+            } catch (error) {
+                console.error('Error fetching data from Ghost API:', error);
+            }
+        }
+
+        function formatDate(dateString) {
+            const options = { year: 'numeric', month: 'long', day: 'numeric' };
+            const date = new Date(dateString);
+            return date.toLocaleDateString('en-US', options);
+        }
+
+        function populatePost(post) {
+            // Populate the title
+            document.getElementById('postTitle').textContent = post.title;
+
+            // Populate the author link and date
+            const authorLink = document.getElementById('authorLink');
+            authorLink.href = `https://x.com/${post.authors[0].slug}`;
+            authorLink.textContent = `@${post.authors[0].slug}`;
+            document.getElementById('postDate').textContent = formatDate(post.published_at);
+
+            // Populate the content
+            document.getElementById('postContent').innerHTML = post.html;
+        }
+
+        // Fetch the post when the page loads
+        fetchPost();
+    </script>
+</body>
+</html>

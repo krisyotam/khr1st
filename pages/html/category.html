@@ -1,10 +1,10 @@
-<!-- categories.html -->
+<!-- category.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Categories</title>
+    <title>Category Posts</title>
     <link rel="stylesheet" href="/pages/css/altstyles.css">
     <link rel="stylesheet" href="/pages/css/about.css">
 </head>
@@ -30,13 +30,13 @@
             </nav>
         </header>
 
-        <h2>Categories</h2>
-        
-        <table id="categoriesTable">
+        <h2 id="categoryTitle">Posts in Category</h2>
+
+        <table id="postsTable">
             <thead>
                 <tr>
-                    <th>Category</th>
-                    <th>Articles</th>
+                    <th>Title</th>
+                    <th>Date</th>
                 </tr>
             </thead>
             <tbody>
@@ -57,60 +57,49 @@
         const API_URL = "https://kris-yotam.ghost.io/ghost/api/content/posts/";
         const API_KEY = "3956cf71a4a7a35e5ead9bf2d6";
 
-        async function fetchAndPopulateCategories() {
+        // Get the category slug from the URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const categorySlug = urlParams.get('category');
+
+        async function fetchCategoryPosts() {
             try {
-                console.log('Fetching posts from Ghost API...');
-                const response = await fetch(`${API_URL}?key=${API_KEY}&include=tags`);
+                console.log(`Fetching posts for category: ${categorySlug}`);
+                const response = await fetch(`${API_URL}?key=${API_KEY}&include=tags&filter=tags:${categorySlug}`);
                 if (!response.ok) {
                     throw new Error(`Network response was not ok: ${response.statusText}`);
                 }
                 const data = await response.json();
-                console.log('Posts fetched successfully:', data);
+                console.log('Category posts fetched successfully:', data);
 
-                populateCategories(data.posts);
+                populatePosts(data.posts);
             } catch (error) {
                 console.error('Error fetching data from Ghost API:', error);
             }
         }
 
-        function populateCategories(posts) {
-            const categoriesTable = document.getElementById('categoriesTable').getElementsByTagName('tbody')[0];
-            categoriesTable.innerHTML = '';
-
-            const categoryMap = {};
+        function populatePosts(posts) {
+            const postsTable = document.getElementById('postsTable').getElementsByTagName('tbody')[0];
+            postsTable.innerHTML = '';
 
             posts.forEach(post => {
-                const hasInternalTag = post.tags.some(tag => tag.name === "#khr1st.com");
+                const row = postsTable.insertRow();
 
-                if (hasInternalTag) {
-                    post.tags
-                        .filter(tag => !tag.name.startsWith('#'))
-                        .forEach(tag => {
-                            if (!categoryMap[tag.name]) {
-                                categoryMap[tag.name] = { count: 0, slug: tag.slug };
-                            }
-                            categoryMap[tag.name].count++;
-                        });
-                }
+                // Create Title cell
+                const titleCell = row.insertCell(0);
+                const postLink = document.createElement('a');
+                postLink.href = `/pages/html/post.html?id=${post.id}`;
+                postLink.textContent = post.title;
+                titleCell.appendChild(postLink);
+
+                // Create Date cell
+                const dateCell = row.insertCell(1);
+                dateCell.textContent = new Date(post.published_at).toLocaleDateString();
             });
 
-            Object.entries(categoryMap).forEach(([name, { count, slug }]) => {
-                const row = categoriesTable.insertRow();
-
-                const categoryCell = row.insertCell(0);
-                const categoryLink = document.createElement('a');
-                categoryLink.href = `/pages/html/category.html?category=${slug}`;
-                categoryLink.textContent = name;
-                categoryCell.appendChild(categoryLink);
-
-                const articlesCell = row.insertCell(1);
-                articlesCell.textContent = count;
-            });
-
-            console.log('Categories table populated successfully.');
+            console.log('Posts table populated successfully.');
         }
 
-        fetchAndPopulateCategories();
+        fetchCategoryPosts();
     </script>
 </body>
 </html>
