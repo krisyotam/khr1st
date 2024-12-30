@@ -58,7 +58,18 @@
 
         // Get the post slug from the URL
         const urlParams = new URLSearchParams(window.location.search);
-        const slug = urlParams.get('slug'); // Use slug instead of ID
+        const slug = urlParams.get('slug');
+
+        // If no slug is found, handle it gracefully
+        if (!slug) {
+            console.error('No slug found in URL parameters');
+            // Display an error message instead of loading post content
+            document.getElementById('postTitle').textContent = "Post not found";
+            document.getElementById('postContent').innerHTML = "<p>The requested post does not exist or the slug is missing from the URL.</p>";
+            displayError();  // Call to display an error message and stop further execution
+        } else {
+            fetchPost();  // Only fetch the post if a slug is present
+        }
 
         async function fetchPost() {
             try {
@@ -70,9 +81,18 @@
                 const data = await response.json();
                 console.log('Post fetched successfully:', data);
 
-                populatePost(data.posts[0]);
+                if (data.posts && data.posts.length > 0) {
+                    populatePost(data.posts[0]);
+                } else {
+                    console.error('No post found with the specified slug');
+                    // Handle the case where no post is found
+                    document.getElementById('postTitle').textContent = "Post not found";
+                    document.getElementById('postContent').innerHTML = "<p>The requested post does not exist.</p>";
+                }
             } catch (error) {
                 console.error('Error fetching data from Ghost API:', error);
+                document.getElementById('postTitle').textContent = "Error fetching post";
+                document.getElementById('postContent').innerHTML = "<p>There was an error loading the post. Please try again later.</p>";
             }
         }
 
@@ -84,20 +104,22 @@
 
         function populatePost(post) {
             // Populate the title
-            document.getElementById('postTitle').textContent = post.title;
+            document.getElementById('postTitle').textContent = post.title || "Untitled";
 
             // Populate the author link and date
             const authorLink = document.getElementById('authorLink');
-            authorLink.href = `https://x.com/${post.authors[0].slug}`;
-            authorLink.textContent = `@${post.authors[0].slug}`;
-            document.getElementById('postDate').textContent = formatDate(post.published_at);
+            authorLink.href = post.authors && post.authors[0] ? `https://x.com/${post.authors[0].slug}` : "#";
+            authorLink.textContent = post.authors && post.authors[0] ? `@${post.authors[0].slug}` : "Unknown Author";
+            document.getElementById('postDate').textContent = post.published_at ? formatDate(post.published_at) : "Date not available";
 
             // Populate the content
-            document.getElementById('postContent').innerHTML = post.html;
+            document.getElementById('postContent').innerHTML = post.html || "Content not available";  // Handle missing content
         }
 
-        // Fetch the post when the page loads
-        fetchPost();
+        // This function stops further execution by disabling the page functionality if no slug is found.
+        function displayError() {
+            document.body.innerHTML = "<h1>Error: Missing slug</h1><p>The requested post does not exist or the slug is missing from the URL.</p>";
+        }
     </script>
 </body>
 </html>

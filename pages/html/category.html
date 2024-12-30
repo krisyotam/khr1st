@@ -1,4 +1,3 @@
-<!-- category.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -39,7 +38,7 @@
                     <th>Date</th>
                 </tr>
             </thead>
-            <tbody>
+            <tbody id="tableContent">
                 <!-- Dynamically filled rows will go here -->
             </tbody>
         </table>
@@ -54,52 +53,132 @@
 
     <script src="/pages/js/dark-mode.js"></script>
     <script>
+        // API Configuration
         const API_URL = "https://kris-yotam.ghost.io/ghost/api/content/posts/";
         const API_KEY = "3956cf71a4a7a35e5ead9bf2d6";
 
-        // Get the category slug from the URL
-        const urlParams = new URLSearchParams(window.location.search);
-        const categorySlug = urlParams.get('category');
+        // Helper Functions
+        function formatDate(dateString) {
+            const options = { year: 'numeric', month: 'long', day: 'numeric' };
+            return new Date(dateString).toLocaleDateString('en-US', options);
+        }
 
+        function createPostLink(post) {
+            if (!post.slug) {
+            console.error("Post missing slug:", post);
+            return '#';
+            }
+        return `/pages/html/post.html?slug=${encodeURIComponent(post.slug)}`;
+        }
+
+
+        function createTableRow(post) {
+            const row = document.createElement('tr');
+            
+            // Create Title cell with link
+            const titleCell = document.createElement('td');
+            const postLink = document.createElement('a');
+            postLink.href = createPostLink(post);
+            postLink.textContent = post.title || "Untitled";
+            titleCell.appendChild(postLink);
+            
+            // Create Date cell
+            const dateCell = document.createElement('td');
+            dateCell.textContent = post.published_at ? 
+                formatDate(post.published_at) : 
+                "Date not available";
+
+            // Append cells to row
+            row.appendChild(titleCell);
+            row.appendChild(dateCell);
+            
+            return row;
+        }
+
+        function showLoading() {
+            const tableContent = document.getElementById('tableContent');
+            tableContent.innerHTML = `
+                <tr>
+                    <td colspan="2" class="loading">Loading posts...</td>
+                </tr>
+            `;
+        }
+
+        function showError(message) {
+            const tableContent = document.getElementById('tableContent');
+            tableContent.innerHTML = `
+                <tr>
+                    <td colspan="2" class="error-message">${message}</td>
+                </tr>
+            `;
+        }
+
+        function updateCategoryTitle(categorySlug) {
+            const title = document.getElementById('categoryTitle');
+            title.textContent = `Posts in ${categorySlug.charAt(0).toUpperCase() + categorySlug.slice(1)}`;
+        }
+
+        // Main fetch and display function
         async function fetchCategoryPosts() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const categorySlug = urlParams.get('category');
+
+            if (!categorySlug) {
+                showError('No category specified');
+                return;
+            }
+
+            updateCategoryTitle(categorySlug);
+            showLoading();
+
             try {
                 console.log(`Fetching posts for category: ${categorySlug}`);
-                const response = await fetch(`${API_URL}?key=${API_KEY}&include=tags&filter=tags:${categorySlug}`);
+                const response = await fetch(
+                    `${API_URL}?key=${API_KEY}&include=tags&filter=tags:${encodeURIComponent(categorySlug)}`
+                );
+
                 if (!response.ok) {
-                    throw new Error(`Network response was not ok: ${response.statusText}`);
+                    throw new Error(`Failed to fetch posts: ${response.statusText}`);
                 }
+
                 const data = await response.json();
                 console.log('Category posts fetched successfully:', data);
 
-                populatePosts(data.posts);
+                if (!data.posts || !Array.isArray(data.posts)) {
+                    throw new Error('Invalid response format from API');
+                }
+
+                if (data.posts.length === 0) {
+                    showError('No posts found in this category');
+                    return;
+                }
+
+                const tableContent = document.getElementById('tableContent');
+                tableContent.innerHTML = ''; // Clear loading message
+
+                // Sort posts by date (newest first)
+                const sortedPosts = data.posts.sort((a, b) => 
+                    new Date(b.published_at) - new Date(a.published_at)
+                );
+
+                // Create and append rows
+                sortedPosts.forEach(post => {
+                    try {
+                        const row = createTableRow(post);
+                        tableContent.appendChild(row);
+                    } catch (error) {
+                        console.error('Error creating row for post:', post, error);
+                    }
+                });
+
             } catch (error) {
-                console.error('Error fetching data from Ghost API:', error);
+                console.error('Error fetching category posts:', error);
+                showError('Failed to load posts. Please try again later.');
             }
         }
 
-        function populatePosts(posts) {
-            const postsTable = document.getElementById('postsTable').getElementsByTagName('tbody')[0];
-            postsTable.innerHTML = '';
-
-            posts.forEach(post => {
-                const row = postsTable.insertRow();
-
-                // Create Title cell
-                const titleCell = row.insertCell(0);
-                const postLink = document.createElement('a');
-                postLink.href = `/pages/html/post.html?id=${post.id}`;
-                postLink.textContent = post.title;
-                titleCell.appendChild(postLink);
-
-                // Create Date cell
-                const dateCell = row.insertCell(1);
-                dateCell.textContent = new Date(post.published_at).toLocaleDateString();
-            });
-
-            console.log('Posts table populated successfully.');
-        }
-
-        fetchCategoryPosts();
+        // Initialize
+        document.addEventListener('DOMContentLoaded', fetchCategoryPosts);
     </script>
 </body>
 </html>
