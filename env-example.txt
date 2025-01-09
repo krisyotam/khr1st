@@ -1,0 +1,11 @@
+# Ghost CMS Configuration
+GHOST_API_URL=https://your-ghost-cms-url.com
+GHOST_CONTENT_API_KEY=your_ghost_content_api_key_here
+
+# Upstash Redis Configuration
+UPSTASH_REDIS_REST_URL=https://your-upstash-redis-url.upstash.io
+UPSTASH_REDIS_REST_TOKEN=your_upstash_redis_token_here
+
+# Optional: Ghost Admin API Key (if needed for additional functionality)
+GHOST_ADMIN_API_KEY=your_ghost_admin_api_key_here
+

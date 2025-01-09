@@ -1,0 +1,108 @@
+.markdown-content {
+  @apply text-base leading-relaxed;
+}
+
+.markdown-content h1 {
+  @apply text-3xl font-bold mt-8 mb-4;
+}
+
+.markdown-content h2 {
+  @apply text-2xl font-semibold mt-6 mb-3;
+}
+
+.markdown-content h3 {
+  @apply text-xl font-medium mt-4 mb-2;
+}
+
+.markdown-content p {
+  @apply mb-4;
+}
+
+.markdown-content a {
+  @apply text-muted-foreground hover:underline;
+}
+
+.markdown-content ul, .markdown-content ol {
+  @apply ml-6 mb-4;
+}
+
+.markdown-content li {
+  @apply mb-2;
+}
+
+.markdown-content blockquote {
+  @apply border-l-4 border-gray-300 dark:border-gray-600 pl-4 py-2 mb-4 italic bg-gray-100 dark:bg-gray-800 rounded;
+}
+
+.markdown-content pre {
+  @apply bg-gray-100 dark:bg-gray-800 rounded p-4 mb-4 overflow-x-auto;
+}
+
+.markdown-content code {
+  @apply font-mono text-sm bg-gray-200 dark:bg-gray-700 rounded px-1 py-0.5;
+}
+
+.markdown-content pre code {
+  @apply bg-transparent dark:bg-transparent p-0;
+}
+
+.markdown-content table {
+  @apply w-full mb-4 border-collapse;
+}
+
+.markdown-content th, .markdown-content td {
+  @apply border border-gray-300 dark:border-gray-600 px-4 py-2;
+}
+
+.markdown-content th {
+  @apply bg-gray-100 dark:bg-gray-800 font-semibold;
+}
+
+.markdown-content img {
+  @apply max-w-full h-auto rounded-lg shadow-md mb-4;
+}
+
+.markdown-content hr {
+  @apply my-8 border-t border-gray-300 dark:border-gray-600;
+}
+
+.dark .markdown-content {
+  color: hsl(0 0% 85%);
+}
+
+.dark .markdown-content h1,
+.dark .markdown-content h2,
+.dark .markdown-content h3,
+.dark .markdown-content h4,
+.dark .markdown-content h5,
+.dark .markdown-content h6 {
+  color: hsl(0 0% 95%);
+}
+
+.dark .markdown-content a {
+  color: hsl(210 100% 70%);
+}
+
+.dark .markdown-content code {
+  background-color: hsl(0 0% 20%);
+  color: hsl(0 0% 95%);
+}
+
+.dark .markdown-content pre {
+  background-color: hsl(0 0% 15%);
+}
+
+.dark .markdown-content blockquote {
+  border-color: hsl(0 0% 30%);
+  background-color: hsl(0 0% 15%);
+}
+
+.dark .markdown-content th {
+  background-color: hsl(0 0% 20%);
+}
+
+.dark .markdown-content td,
+.dark .markdown-content th {
+  border-color: hsl(0 0% 30%);
+}
+
